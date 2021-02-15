@@ -1,0 +1,31 @@
+#
+# ~/.bashrc
+#
+source ~/scripts/git-prompt.sh
+source /etc/profile.d/autojump.bash
+source /usr/share/doc/pkgfile/command-not-found.bash
+shopt -s autocd
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+
+alias ls='lsd -a'
+alias ll="lsd -al"
+alias batstat='acpi -V'
+alias vm='vboxmanage'
+alias cat="bat"
+alias sf="surf-open.sh"
+alias gp="git push"
+alias pg="ping www.google.com"
+alias vol="pulsemixer"
+
+
+#PS1='[\u@\h \W]\$ '
+#PS1='\\w:\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\$ '
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

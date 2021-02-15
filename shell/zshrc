@@ -1,0 +1,15 @@
+# Source manjaro-zsh-configuration
+if [[ -e ~/.zsh/manjaro-zsh-config ]]; then
+  source ~/.zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e ~/.zsh/manjaro-zsh-prompt ]]; then
+  source ~/.zsh/manjaro-zsh-prompt
+fi
+alias pg='ping www.manjaro.org'
+alias cat='bat'
+alias todo='~/todo/todo.sh'
+alias ls='lsd'
+alias ll='lsd -l'
+alias vm='vboxmanage'
+alias dotfiles='git --git-dir=/home/tactinix/.dotfiles/ --work-tree=/home/tactinix'
