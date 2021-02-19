@@ -1,6 +1,8 @@
-# Dotfiles
+# Notes
 
-Dotfiles are managed via a bare git repo
+### Personal configs - not much use to anybody else
+
+Notes on managing via a git bare repo 
 ```shell
 git init --bare $HOME/.dotfiles
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
